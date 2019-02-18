@@ -1,64 +1,64 @@
-# Instructions for use
+# Kullanım Talimatları
 
-**Important! Read the instructions from start to finish, and then act! Good luck!**
+**Önemli! Talimatları baştan sona okuduktan sonra çalışmaya başlayın! İyi şanslar!**
 
-## How to work?
+## Nasıl Çalışır?
 
-You will need a downloaded project. In the ***instabot/examples/*** folder there are scripts for work.
+Öncelikle projeyi indirmeniz gerekecek. ***instabot/examples/*** klasörünün içerisinde scriptin çalıştırabileceğiniz dosyaları bulunmaktadır.
 
-## How do I run the script?
+## Scriptleri nasıl çalıştırabilirim?
 
-Open the command line, use ***cd*** to go to the project directory, namely ***instabot/examples***. Type.
+Komut satırını açıp, ***cd*** komutunu kullanarak proje klasörüne (***instabot/examples***) erişin ve yazın.
 
 ``` python
 python name.py param
 ```
 
-Where ***name*** is the name of the script, ***param*** is the required parameter for running the script. Not all scripts need a parameter.
+***name*** yerine çalıştırmak istediğiniz scripti yazın, ***param*** ise gerekli parametreleri tanımlamanız gereken kısım. Her scriptte parametre girmenize gerek yoktur. 
 
-## How do I know if I need an input parameter for a script?
+## Scriptin parametreye ihtiyaç duyup duymadığını nasıl anlarım?
 
-Run the script by typing.
+Önce scripti çalıştırın.
 
 ``` python
 python name.py
 ```
-
-If there are no necessary parameters, the script will stop and display an error.
-Example.
-Run the script.
+Eğer gerekli bir parametre girilmemiş ise, script durdurulacak ve size bir hata gösterecektir.
+Örneğin: 
+Scripti çalıştırın.
 
 ``` python
 python like_hashtags.py. 
 ```
 
-The script stops and displays a message:
+Script durdurulacak ve hata mesajı gözükecek.
 
 ``` python
 error: the following arguments are required: hashtags.
 ```
 
-That is, we had to enter a hashtag. Correct example:
+Yani, bir hashtag girmek zorunda kaldık. Doğru örnek:
 
 ``` python
 python like_hashtags.py follow
 ```
 
-## All inclusive
+## Herşey Dahil
 
-***multi_script_CLI.py*** is a script that contains all the functions. The first time you run it, you will be prompted to configure the script. Script settings are stored in the ***setting.txt*** file. Also files will be created: ***hashtag_file.txt, users_file.txt, whitelist.txt, blacklist.txt, comment.txt***.
+***multi_script_CLI.ph*** scripti tüm fonksiyonları içeren bir scripttir. İlk çalıştırdığınız zaman, sizden bir konfigurasyon istenecektir. Script ayarları ***setting.txt*** dosyası içerisinde saklanır. Ayrıca ***hashtag_file.txt, users_file.txt, whitelist.txt, blacklist.txt, comment.txt*** dosyaları da oluşturulacaktır.
 
-## 24/7
+## 7/24 Çalışır 
 
-Yes, there is a script that rounds up subscribers and subscriptions of certain people around the clock, and also likes photos by nickname and hashtag. All this allows the script - ***ultimate.py***, which is in the ***instabot/examples/ultimate*** folder. The folder also contains other text files for running the script. In these files, each new parameter needs to be written from a new line.
+Evet, belirli kişilerin abonelerini ve aboneliklerini 24 saat boyunca takip eden bir senaryo var, ayrıca nickname ve hashtag'e göre fotoğrafları beğenir. Bütün bunlar ***ultimate.py*** scriptinde yer alır ***instabot/examples/ultimate*** klasöründe.
+Bu klasör aynı zamanda scripti çalıştıracak diğer text dosyalarını da içerir. Bu dosyalar içinde, ihtiyaç duyulan her yeni parametre, yeni satıra yazılmalıdır. 
 
-## Schedule
+## Zamanlama Yapmak
 
-Also there is a script that will work around the clock, BUT this script will act according to plan. This script is ***ultimate.py*** in the ***instabot/examples/ultimate_schedule*** folder. You can open the code with any editor and fix it. This will be easy, since there are comments in important parts of the code.
+Ayrıca zamanlayarak çalıştırabileceğiniz scriptte mevcuttur. ***instabot/examples/ultimate_schedule*** klasörü içerisinde ***ultimate.py*** scriptini kullanmanız gerekmektedir. Bu scripti herhangi bir kod editör ile açıp düzenlemeniz gerekmektedir. Çok kolay ve zahmetsiz bir işlemdir, sorun yaşamayacaksınız. 
 
-## How to configure the script correctly
+## Scripti nasıl doğru konfigüre edebilirim
 
-To ensure that your account has not been banned, you need to configure the script Example. Suppose we need to keep photos on the hashtag every minute. First of all, time in seconds. Open ***like_hashtags.py*** with a text editor. Find such lines (approximately so they should look).
+Hesabınızın yasaklanmadığından emin olmak için Örnek betiğini yapılandırmanız gerekir. Belirli bir hashtagdeki fotoğrafları her dakika kontrol ettiğimizi varsayalım. Her şeyden önce, zamanı saniye cinsinden kontrol edeceğiz. Herhangi bir editör ile ***like_hashtags.py*** dosyasını açın. Bu tür satırlar bulun (Aşağı yukarı benzer olacaklardır).
 
 ``` python
 bot = Bot()
@@ -66,13 +66,13 @@ bot.login(username=args.u, password=args.p,
           proxy=args.proxy)
 ```
 
-Next in line.
+Sonraki satırda.
 
 ``` python
 bot = Bot()
 ```
 
-We need to write a parameter in parentheses. This parameter is ***like_delay***. This parameter needs to be set to 60, since we need every minute the bot to be happy with the photo on the hashtag. In the end, it will look like this.
+Parantez içine bir parametre yazmamız gerekiyor. Bu parametre *** like_delay *** şeklindedir. Bu parametrenin 60 olarak ayarlanması gerekiyor, çünkü botun hashtag'deki fotoğrafı beğenmesi için her 1 dakikaya ihtiyacımız var. Sonunda, bu gibi görünecek.
 
 ``` python
 bot = Bot(like_delay=60)
@@ -80,36 +80,36 @@ bot.login(username=args.u, password=args.p,
           proxy=args.proxy)
 ```
 
-## Parameter List
+## Parametre Listesi
 
-| parameter| description | example |
+| Parametre | Açıklama | Örnek |
 | ------------- |:-------------:| ------:|
-| proxy | Proxy for Instabot | None|
-| max_likes_per_day| How many likes the bot will perform per day| 1000|
-| max_unlikes_per_day | How many medias the bot will unlike in a day| 1000|
-| max_follows_per_day| Max number of follow per day| 350|
-| max_unfollows_per_day| Max number of unfollow per day| 350|
-| max_comments_per_day| Max number of comments per day| 100|
-| max_likes_to_like| If the media has more likes then this value - it will be ignored and not be liked | 200|
-| filter_users | Filter users if True | True|
-| max_followers_to_follow| If the user has more followers than this value - the user will not be followed or liked. | 2000|
-| min_followers_to_follow| If the user has fewer followers than this value - the user will not be followed or liked.| 10|
-| max_following_to_follow| If the user has more followings than this value - the user will not be followed or liked.| 10000|
-| min_following_to_follow| If the user has fewer followings than this value - the user will not be followed or liked.| 10|
-| max_followers_to_following_ratio| if the user's followers/following is greater than this value - the user will not be followed or liked.| 10|
-| max_following_to_followers_ratio| if user's following/followers is greater than this value - he will not be followed or liked.| 2|
-| min_media_count_to_follow| If the user has fewer media count than this value - the user will not be followed. | 3|
-|max_following_to_block|If the user have a following more than this value - the user will be blocked in blocking scripts because he is a massfollower| 2000|
-| max_likes_to_like | Max number of likes that can media have to be liked | 100 |
-| like_delay | Delay between likes in seconds| 10|
-| unlike_delay | Delay between unlikes in seconds | 10|
-| follow_delay | Delay between follows in seconds| 30|
-| unfollow_delay | Delay between unfollows in seconds| 30|
-| comment_delay | Delay between comments in seconds|  60|
-| whitelist | Path to the file with users that shouldn't be unfollowed| "whitelist.txt"|
-| blacklist | Path to the file with users that shouldn't be followed, liked or commented | "blacklist.txt"|
-| comments_file | Path to the comments database | "comments.txt" |
-| stop_words| A list of stop words: don't follow a user if they have any of these stop words in their description| ['shop', 'store', 'free']|
+| proxy | Instabot için proxy | None|
+| max_likes_per_day| Bot günde kaç beğeni gönderebilecek | 1000|
+| max_unlikes_per_day | Bot günde kaç gönderiyi unlike edebilecek | 1000|
+| max_follows_per_day| Günlük maksimum follow etme sayısı | 350|
+| max_unfollows_per_day| Günlük maksimum unfollow etme sayısı | 350|
+| max_comments_per_day| Günlük yorum yapma sayısı | 100|
+| max_likes_to_like| Eğer gönderi bu sayıdan daha fazla beğeniye sahip ise - onu yok sayacak ve beğenmeyecek | 200|
+| filter_users | Kullanıcı filtreleme açıp kapatma | True|
+| max_followers_to_follow| Eğer kullanıcı bu sayıdan daha fazla takipçiye sahip ise - onu yok sayacak ve takip isteği veya beğeni göndermeyecek. | 2000|
+| min_followers_to_follow| Eğer kullanıcı bu sayıdan daha az takipçiye sahip ise - onu yok sayacak ve takip isteği veya beğeni göndermeyecek.| 10|
+| max_following_to_follow| Eğer kullanıcı bu sayıdan daha fazla takip eden sayısına sahip ise - onu yok sayacak ve takip isteği veya beğeni göndermeyecek.| 10000|
+| min_following_to_follow| Eğer kullanıcı bu sayıdan daha az takip eden sayısına sahip ise - onu yok sayacak ve takip isteği veya beğeni göndermeyecek.| 10|
+| max_followers_to_following_ratio| Eğer kullanıcının takipçi / takip oranı bu sayıdan fazla ise - onu yok sayacak ve takip isteği veya beğeni göndermeyecek. | 10|
+| max_following_to_followers_ratio| Eğer kullanıcının takip / takipçi oranı bu sayıdan fazla ise - onu yok sayacak ve takip isteği veya beğeni göndermeyecek.| 2|
+| min_media_count_to_follow| Eğer kullanıcının bu sayıdan daha az gönderi sayısı var ise - onu takip etmeyecek. | 3|
+|max_following_to_block|Eğer kullanıcının bu sayıdan daha fazla takipçisi var ise - onu takip etmeyecek ve bloklayacak. Çünkü bu sayfa bir kitle sayfası olabilir.| 2000|
+| max_likes_to_like | Gönderiyi beğenmek için, sahip olması gereken maksimum beğeni sayısı. | 100 |
+| like_delay | Beğeniler arasındaki bekleme süresi (saniye) | 10|
+| unlike_delay | Beğeni kaldırma arasındaki bekleme süresi (saniye) | 10|
+| follow_delay | Follow yapma arasındaki bekleme süresi (saniye) | 30|
+| unfollow_delay | unFollow yapma arasındaki bekleme süresi (saniye) | 30|
+| comment_delay | Yorum yapma arasındaki bekleme süresi (saniye) |  60|
+| whitelist | Takipten çıkarılmaması gereken kullanıcı listesi | "whitelist.txt"|
+| blacklist | Takip edilmemesi, beğenilmemesi ve yorum yapılmaması gereken kullanıcıların listesi | "blacklist.txt"|
+| comments_file | Yorum listesi veritabanı | "comments.txt" |
+| stop_words| Dikkat edilecek kelimeler. Bu kelimelerin yer aldığı açıklama kısımlarına sahip kullanıcıları takip etme. | ['shop', 'store', 'alışveriş']|
 
 
 
