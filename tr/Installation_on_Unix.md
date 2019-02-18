@@ -1,29 +1,28 @@
-# How to install and run the script on Unix? (Linux, macOS)
-* Open terminal and run.
+# Unix üzerinde nasıl kurulum yapılır ve çalıştırılır? (Linux, macOs)
+* Terminali çalıştırın.
 ```
 pip install -U instabot
 git clone https://github.com/instagrambot/instabot --recursive
 cd instabot/examples
 ```
-
-* And then you can run any example like this.
+* Ve sonrasında aşağıdaki gibi kolaylıkla çalıştırabilirsiniz.
 ```
 python multi_script_CLI.py
 ```
 
-## Errors
+## Hatalar
 
-* If you have `pip: command not found` error, try:
+* Eğer `pip: command not found` hatası alırsanız, aşağıdaki kod satırını deneyin:
 ```
 sudo easy_install pip
 ```
 
-* If you have `permission denied` error after `pip install -U instabot`, try:
+* Eğer `pip install -U instabot` yaptığınız sırada `permission denied` hatası alırsanız, aşağıdaki kod satırını deneyin:
 ```
 sudo pip install -U instabot
 ```
 
-* If you still have `permission denied` error after `sudo pip install -U instabot`, try:
+* Eğer `sudo pip install -U instabot` komutu sırasında hala `permission denied` hatası alıyorsanız, aşağıdaki kod satırını deneyin:
 ```
 sudo -H pip install -U instabot
 ```
