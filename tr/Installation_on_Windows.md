@@ -1,43 +1,43 @@
-# Installation instructions on Windows
+# Windows Kurulum Talimatları
 
-**Important! Read the instructions from start to finish, and then act! Good luck!**
+**Önemli! Talimatları baştan sona okuyun ve daha sonra çalışmaya başlayın. İyi şanslar!**
 
-## Installing Python 3
+## Python 3 Kurulumu
 
-1. Go to the Python [website](https://www.python.org/downloads/).
-2. Choose the version that suits you (depends on the operating system).
-3. Download.
-4. Run the installer.
-5. Follow the instructions that the installer offers you. Check "Add Python 3.x to Path" and click on Install Now (see the figure below). If you are an experienced user, select Customize installation.
+1. Python [website](https://www.python.org/downloads/) gidin.
+2. Tercih ettiğiniz sürümü seçin (İşletim sisteminize uygun olarak).
+3. İndirin.
+4. Yükleyiciyi çalıştırın.
+5. Yükleyicinin önerdiği talimatları yerine getirin. "Add Python 3.x to Path" seçeneğini işaretleyerek devam edin. Eğer deneyimli bir kullanıcı iseniz Customize seçeneği ile devam edebilirsiniz.
 
 ![Install Python 3 and add to PATH](../img/install_python_on_Windows.PNG "Install Python 3 and add to PATH").
 
-## Downloading a project from GitHub
+## Github'dan Projeyi İndirme
 
-There are two options for downloading the project:
+Projeyi indirmeniz için iki seçenek mevcut:
 
-a) Click the link https://github.com/instagrambot/instabot. Click on "Clone or download", and then on "Download ZIP". Unpack it.
-b) Installing the Git Client:
-1. Go to the Git [site](https://git-scm.com/downloads).
-2. Choose the version that suits you (depends on the operating system).
-3. Download.
-4. Run the installer.
-5. Follow the instructions that the installer suggests (click on Next). You can configure the client yourself if you are an experienced user.
-6. After installation, run the command line.
-7. At the command prompt, type.
+a) Linke gidin: https://github.com/instagrambot/instabot. "Clone or download" butonuna tıklayın, ve ardından "Download ZIP" seçeneğinden indirin. Dosyaları zipten çıkarın.
+b) Git Client Yükleyin:
+1. Git [site](https://git-scm.com/downloads). gidin.
+2. Tercih ettiğiniz sürümü seçin (İşletim sisteminize uygun olarak).
+3. İndirin.
+4. Yükleyiciyi çalıştırın.
+5. Yükleyicinin önerdiği talimatları yerine getirin. Eğer deneyimli bir kullanıcı iseniz Customize seçeneği ile devam edebilirsiniz.
+6. Kurulumun ardından komut istemini (CMD) çalıştırın.
+7. Aşağıdaki komutları yazın.
 
 ``` bash
 git clone https://github.com/instagrambot/instabot --recursive
 ```
-And press Enter.
+Enter'a basın.
 
-***Congratulations! You downloaded the project!***
+***Tebrikler! Projeyi indirdiniz!***
 
-## Installing instabot in a virtual Python environment
+## Python ortamında Instabot kurulumu
 
-At the command prompt, type.
+Komut istemini (CMD) açın ve yazın.
 
 ``` python
 pip install -U instabot
 ```
-And press Enter.
+Enter'a basın.
